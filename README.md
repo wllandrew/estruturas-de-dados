@@ -2,5 +2,4 @@
 
 - Universidade Estadual de Londrina - Departamento de Computação.
 - Curso: Ciência de Dados e Inteligência Artificial.
-- 2º Semestre
-- Professor: Artur C. Artoni
+- Professor(es/as): Artur C. Artoni, André Menolli
