@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <stdbool.h>
 
-#define MAX_SIZE 100
+#define MAX_SIZE 1001
 
 typedef int REGISTRO;
 
@@ -94,18 +94,6 @@ bool inserir(Lista *l, int pos, REGISTRO r)
     return true;
 }
 
-int busca_sentinela(Lista *l, REGISTRO r)
-{
-    if (!inserir(l, l->qtd, r)) return -1;
-
-    int i = 0;    
-    while (l->lista[i] != r) i++;
-
-    if (i == l->qtd + 1) return -1;
-
-    return i;
-}
-
 bool pop(Lista *l, REGISTRO *r)
 {
     if (lista_vazia(l))
@@ -116,6 +104,23 @@ bool pop(Lista *l, REGISTRO *r)
     *r = l->lista[l->qtd];
     l->lista[l->qtd] = 0;
     return true;
+}
+
+int busca_sentinela(Lista *l, REGISTRO r)
+{
+    l->lista[l->qtd] = r;
+
+    int i = 0;
+    while (l->lista[i] != r) i++;
+
+    if (i < l->qtd)
+    {
+        return i;
+    }
+    else
+    {
+        return -1;
+    }
 }
 
 bool retirar(Lista *l, int pos, REGISTRO *r)
