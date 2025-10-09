@@ -3,11 +3,11 @@
 
 #define MAX_SIZE 100
 
-typedef int ELEMENTO;
+typedef int TIPOCHAVE;
 
 typedef struct Fila
 {
-    ELEMENTO fila[MAX_SIZE];
+    TIPOCHAVE fila[MAX_SIZE];
     int inicio;
     int qtd;
 } Fila;
@@ -36,7 +36,7 @@ bool filaVazia(Fila *f)
     return false;
 }
 
-ELEMENTO pop(Fila *f)
+TIPOCHAVE pop(Fila *f)
 {
     if (filaVazia(f))
     {
@@ -48,7 +48,7 @@ ELEMENTO pop(Fila *f)
     return v;
 }
 
-void push(Fila *f, ELEMENTO v)
+void push(Fila *f, TIPOCHAVE v)
 {
     if (filaCheia(f))
     {

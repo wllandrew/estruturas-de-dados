@@ -84,7 +84,7 @@ int main()
             printf("Valor: ");
             scanf("%d", &val);
 
-            confirmacao = inserir_em_ordem_linear(&l, val);
+            confirmacao = insercao_em_ordem_linear(&l, val);
 
             if (!confirmacao)
             {
