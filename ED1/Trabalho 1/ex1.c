@@ -165,7 +165,8 @@ int main()
             }
             else
             {
-                resultado = ProcuraPilha(&A[pilha-1], valor);
+                int end;
+                resultado = ProcuraPilha(&A[pilha-1], valor, &end);
                 if (!resultado)
                 {
                     printf("Valor nao esta na pilha\n");
