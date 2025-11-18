@@ -63,7 +63,7 @@ void quick_ordena(int arr[], int init, int end)
         return;
     }
 
-    // int pivot = arr[rand() % (end - init)];  //-> Pivo aleatorio
+    int pivot = arr[rand() % (end - init)];  //-> Pivo aleatorio
     // int pivot = end-1;                       //-> Pivo no final
     // int pivot = init;                        //-> Pivo no inicio
     // int pivot = arr[(init + end) / 2];       //-> Pivo no meio
